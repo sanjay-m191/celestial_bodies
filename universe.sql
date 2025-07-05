@@ -269,6 +269,11 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 --
 
 INSERT INTO public.galaxy VALUES (1, 'milky way', 50000, 'ellipse', false);
+INSERT INTO public.galaxy VALUES (2, 'IO34', 50000, 'ellipse', false);
+INSERT INTO public.galaxy VALUES (3, 'IO35', 50000, 'ellipse', true);
+INSERT INTO public.galaxy VALUES (4, 'IO36', 50000, 'ellipse', true);
+INSERT INTO public.galaxy VALUES (5, 'IO37', 50000, 'ellipse', true);
+INSERT INTO public.galaxy VALUES (6, 'IO38', 90000, 'ellipse', true);
 
 
 --
@@ -276,6 +281,25 @@ INSERT INTO public.galaxy VALUES (1, 'milky way', 50000, 'ellipse', false);
 --
 
 INSERT INTO public.moon VALUES (1, 'valhalla', 4000, NULL, 'unknown', 1);
+INSERT INTO public.moon VALUES (2, 'YU-0', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (3, 'YU-1', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (4, 'YU-2', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (5, 'YU-3', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (6, 'YU-4', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (7, 'YU-5', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (8, 'YU-6', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (9, 'YU-7', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (10, 'YU-8', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (11, 'YU-9', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (12, 'YU-91', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (13, 'YU-92', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (14, 'YU-93', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (15, 'YU-94', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (16, 'YU-95', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (17, 'YU-96', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (18, 'YU-97', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (19, 'YU-98', 300000, false, 'freezing', 1);
+INSERT INTO public.moon VALUES (20, 'YU-99', 300000, false, 'freezing', 1);
 
 
 --
@@ -283,12 +307,27 @@ INSERT INTO public.moon VALUES (1, 'valhalla', 4000, NULL, 'unknown', 1);
 --
 
 INSERT INTO public.planet VALUES (1, 'Eurka', 12, false, 'no details', 1);
+INSERT INTO public.planet VALUES (3, 'Elzy', 3, true, 'Ocean', 1);
+INSERT INTO public.planet VALUES (4, 'AE-10', 3, true, 'Fire', 1);
+INSERT INTO public.planet VALUES (5, 'IE-10', 3, true, 'Fire', 1);
+INSERT INTO public.planet VALUES (6, 'IE-100', 7, true, 'Fire', 1);
+INSERT INTO public.planet VALUES (7, 'IE-100', 7, true, 'Forest', 1);
+INSERT INTO public.planet VALUES (8, 'LVE-10', 0, true, 'Lava', 1);
+INSERT INTO public.planet VALUES (9, 'LVE-11', 0, false, 'Frozen', 1);
+INSERT INTO public.planet VALUES (10, 'IRT-11', 0, false, 'Acedic', 1);
+INSERT INTO public.planet VALUES (11, 'Plution', 0, false, 'Lost', 1);
+INSERT INTO public.planet VALUES (12, 'Krypton', 1, false, 'Fictional', 1);
+INSERT INTO public.planet VALUES (13, 'Batcave', 1, true, 'Fictional', 1);
+INSERT INTO public.planet VALUES (14, 'Aruthra', 100, true, 'Fictional', 1);
 
 
 --
 -- Data for Name: resource; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.resource VALUES (1, 'water', 'H2O');
+INSERT INTO public.resource VALUES (2, 'wood', 'C2');
+INSERT INTO public.resource VALUES (3, 'magnetite', 'FE3O2');
 
 
 --
@@ -296,41 +335,47 @@ INSERT INTO public.planet VALUES (1, 'Eurka', 12, false, 'no details', 1);
 --
 
 INSERT INTO public.star VALUES (1, 'LTR-1', 1, 'nebula', 300000, 400000);
+INSERT INTO public.star VALUES (2, 'RG-1', 2, 'nebula', 4000000, 20000);
+INSERT INTO public.star VALUES (3, 'RG-2', 2, 'nebula', 4000000, 20000);
+INSERT INTO public.star VALUES (4, 'RG-3', 2, 'nebula', 4000000, 20000);
+INSERT INTO public.star VALUES (5, 'RG-4', 2, 'nebula', 4000000, 20000);
+INSERT INTO public.star VALUES (6, 'RG-5', 2, 'nebula', 4000000, 20000);
+INSERT INTO public.star VALUES (7, 'RG-6', 2, 'nebula', 4000000, 20000);
 
 
 --
 -- Name: galaxy_galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 1, true);
+SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 
 
 --
 -- Name: moon_moon_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.moon_moon_id_seq', 1, true);
+SELECT pg_catalog.setval('public.moon_moon_id_seq', 20, true);
 
 
 --
 -- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, true);
+SELECT pg_catalog.setval('public.planet_planet_id_seq', 14, true);
 
 
 --
 -- Name: resource_resource_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.resource_resource_id_seq', 1, false);
+SELECT pg_catalog.setval('public.resource_resource_id_seq', 3, true);
 
 
 --
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 1, true);
+SELECT pg_catalog.setval('public.star_star_id_seq', 7, true);
 
 
 --
